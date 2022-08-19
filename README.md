@@ -2,9 +2,7 @@
 Qr code of wechat mini program generated based on PHP
 
 
-# Use
-
-- 构造方法请求参数
+# 构造方法请求参数
 
 | 属性    | 类型 | 必填 | 说明                                                                                      |
 | --------- | ------ | ---- | ------------------------------------------------------------------------------------------- |
@@ -17,7 +15,7 @@ Qr code of wechat mini program generated based on PHP
 | auth      | string | 否  | 当driver是redis时，驱动密码默认为无                                             |
 | expire    | number | 否  | 过期时间，默认值为0                                                                |
 
-- 方法create参数
+# 方法create参数
 
 | 属性      | 类型 | 必填 | 说明                                                                                                                                                                            |
 | ----------- | ------ | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,6 +27,8 @@ Qr code of wechat mini program generated based on PHP
 | auto_color  | bool   | 否  | 自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调，默认 false                                                                         |
 | line_color  | object | 否  | 默认是{"r":0,"g":0,"b":0} 。auto_color 为 false 时生效，使用 rgb 设置颜色 例如 {"r":"xxx","g":"xxx","b":"xxx"} 十进制表示                                   |
 | is_hyaline  | bool   | 否  | 默认是false，是否需要透明底色，为 true 时，生成透明底色的小程序                                                                                         |
+
+# Use
 
 ```php
 <?php
