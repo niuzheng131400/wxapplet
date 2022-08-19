@@ -1,0 +1,21 @@
+{
+    "name": "niuz/wxapplet",
+    "description": "Qr code of wechat mini program generated based on PHP",
+    "type": "1",
+    "require": {
+        "php": ">=7.0"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "niuzheng131400",
+            "email": "771036148@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
