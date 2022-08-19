@@ -5,9 +5,11 @@ namespace App\Driver;
 class CSession implements ICache
 {
     private static $_instance = null;
+    private $expire = 86400;
 
     public function __construct($option)
     {
+        $this->expire = isset($option->expire) && !empty($option->expire) ? $option->expire : $this->expire;
         $this->init($option);
     }
 
@@ -28,7 +30,7 @@ class CSession implements ICache
     public function add($key, $value, $expire = null): bool
     {
         $_SESSION[$key]['value'] = $value;
-        $_SESSION[$key]['expire'] = time() + $expire;
+        $_SESSION[$key]['expire'] = time() + is_null($expire) ? $this->expire : $expire;
         return true;
     }
 
@@ -41,7 +43,7 @@ class CSession implements ICache
     public function set($key, $value, $expire = null): bool
     {
         $_SESSION[$key]['value'] = $value;
-        $_SESSION[$key]['expire'] = time() + $expire;
+        $_SESSION[$key]['expire'] = time() + is_null($expire) ? $this->expire : $expire;
         return true;
     }
 

@@ -8,6 +8,7 @@ class CMemcache implements ICache
     private $mc = null;
     private $host = '127.0.0.1';
     private $port = 11211;
+    private $expire = 86400;
 
     private function __construct($option = null)
     {
