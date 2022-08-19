@@ -6,7 +6,7 @@ class Base
 {
     public function __construct()
     {
-//        if (!self::checkAgent()) self:: showJson(9000, 'agent illegal');
+        if (!self::checkAgent()) self:: showJson(9000, 'agent illegal');
     }
 
     static private function checkAgent(): bool
