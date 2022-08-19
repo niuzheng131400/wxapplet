@@ -1,6 +1,7 @@
 # php-wx-applet
 Qr code of wechat mini program generated based on PHP
 
+
 # Use
 
 - 构造方法请求参数
